@@ -39,7 +39,7 @@ h1 {
 .main-text-box {
     position: absolute;
     width: 1140px;
-    top: 50%;
+    top: 65%;
     left: 50%;
     transform: translate(-50%, -50%); /** Text position*/
 }
@@ -88,6 +88,47 @@ input[type=submit]:active {
 .btn-ghost:active {
     color: #fff;
     border: 1px solid #009d9e;
+}
+
+/*-------------------------------------------*/
+/*Menu*/
+/*-------------------------------------------*/
+.main-nav {
+    float: right;
+    list-style: none;
+}
+
+.main-nav li {
+    display: inline-block; /* show side by side*/
+    margin-left: 40px;
+    margin-top: 55px;
+}
+
+.main-nav li a:visited,
+.main-nav li a:link {
+    padding: 8px 0;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s;
+
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #00d2d3;
+}
+
+/*-------------------------------------------*/
+/*BASIC SETUP*/
+/*-------------------------------------------*/
+.logo {
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
 }
 
 /*-------------------------------------------*/
