@@ -1,3 +1,5 @@
+/*Base color: #61D2B4;*/
+
 * {
     margin: 0;
     padding: 0;
@@ -5,8 +7,8 @@
 }
 
 html {
-    background-color: grey;
-    color: #fff;
+    background-color: #ffffff;
+    color: #000000;
     font-family: 'Lato', 'Arial', sans-serif;
     font-size: 20px;
     font-weight: 300;
@@ -24,23 +26,71 @@ header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url("images/picture-leg-press.jpeg");
     background-position: center;
 }
-
-h1 {
-    margin: 0 !important;
-    margin-bottom: 20px !important;
-    color: #ffff;
-    font-size: 240% !important;
+.box{
+    padding: 1%;
+}
+/*-------------------------------------------*/
+/* Text - h1/h2/.../p*/
+/*-------------------------------------------*/
+.box p{
+    font-size: 90%;
+    line-height: 145%;
+}
+h1,
+h2,
+h3 {
     font-weight: 300;
     text-transform: uppercase;
-    letter-spacing: 1px;
+}
+
+h1 {
+    font-size: 240%;
+    /*This will be the 48px because the html font-size is 20px*/
+    margin-top: 0 !important;
+    margin-bottom: 20px;
+    color: #fff !important;
     word-spacing: 4px;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+/*put a line between below the text*/
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #61D2B4;
+    content: " "; /* very important for when defining a after class*/
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+h3 {
+    font-size: 110%;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: 400
+}
+
+.long-text {
+    line-height: 145%;
+    width: 70%;
+    margin-left:15%;
 }
 
 .main-text-box {
     position: absolute;
     width: 1140px;
-    top: 65%;
-    left: 50%;
+    top: 75%;
+    left: 65%;
     transform: translate(-50%, -50%); /** Text position*/
 }
 
@@ -60,16 +110,16 @@ h1 {
 .btn-full:link,
 .btn-full:visited,
 input[type=submit] {
-    background-color: #00d2d3;
-    border: 1px solid #00d2d3;
+    background-color: #61D2B4;
+    border: 1px solid #61D2B4;
     color: #fff;
     margin-right: 20px;
 }
 
 .btn-ghost:link,
 .btn-ghost:visited {
-    color: #00d2d3;
-    border: 1px solid #009d9e;
+    color: #61D2B4;
+    border: 1px solid #61D2B4;
 }
 
 .btn:hover,
@@ -87,7 +137,7 @@ input[type=submit]:active {
 .btn-ghost:hover,
 .btn-ghost:active {
     color: #fff;
-    border: 1px solid #009d9e;
+    border: 1px solid #61D2B4;
 }
 
 /*-------------------------------------------*/
@@ -100,35 +150,52 @@ input[type=submit]:active {
 
 .main-nav li {
     display: inline-block; /* show side by side*/
-    margin-left: 40px;
-    margin-top: 55px;
+    margin-left: 20px;
+    margin-top: 25px;
 }
 
 .main-nav li a:visited,
 .main-nav li a:link {
-    padding: 8px 0;
+    padding: 6px 10px;
     color: #fff;
     text-decoration: none;
+    border-radius: 200px;
+    /*Transition between colors and borders when hovering/clicking on it*/
+    transition: background-color 0.3s, border 0.3s, color 0.3s;
     text-transform: uppercase;
     font-size: 90%;
     border-bottom: 2px solid transparent;
-    transition: border-bottom 0.3s;
-
 }
 
 .main-nav li a:hover,
 .main-nav li a:active {
-    border-bottom: 2px solid #00d2d3;
+    background-color: #61D2B4;
 }
 
 /*-------------------------------------------*/
-/*BASIC SETUP*/
+/* Logo/Icons
 /*-------------------------------------------*/
 .logo {
     height: 100px;
     width: auto;
     float: left;
     margin-top: 20px;
+}
+
+.services-icons {
+    height: 65px;
+    width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: 37%;
+    padding: 4px 0;
+}
+
+/*-------------------------------------------*/
+/* Sections
+/*-------------------------------------------*/
+section {
+    padding: 80px 0;
 }
 
 /*-------------------------------------------*/
