@@ -188,36 +188,56 @@ input[type=submit]:active {
 /*-------------------------------------------*/
 .main-nav {
     float: right;
-    list-style: none;
-    background: #0d0d0d;
+    background-color: black;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    text-align: right;
+    transition: background-color .5s ease-out;
+    z-index: 10
 }
 
 .main-nav li {
+    list-style: none;
+    background: #0d0d0d;
     display: inline-block; /* show side by side*/
-    margin-left: 20px;
-    margin-top: 25px;
-}
-
-.main-nav li a:visited,
-.main-nav li a:link {
-    padding: 6px 10px;
-    color: #fff;
-    text-decoration: none;
+    margin-right: 15px;
+    margin-top: 20px;
+    padding: 6px 10px !important;
     border-radius: 200px;
-    /*Transition between colors and borders when hovering/clicking on it*/
-    transition: background-color 0.3s, border 0.3s, color 0.3s;
-    text-transform: uppercase;
-    font-size: 90%;
     border-bottom: 2px solid transparent;
 }
 
-.main-nav li a:hover,
-.main-nav li a:active,
-.filtr-button:hover,
-.filtr-button:active {
-    background-color: #61D2B4;
+.main-nav li a {
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 90%;
+
 }
 
+.main-nav li:visited,
+.main-nav li:link {
+    color: #fff;
+    transition: background-color 0.3s, border 0.3s, color 0.3s;
+}
+
+.main-nav li:hover,
+.main-nav li.active {
+    background-color: #61D2B4;
+    border-radius: 200px;
+}
+
+
+
+.filtr-button:hover,
+.filtr-button:active,
+li.filtr-button.filtr.active {
+    background-color: #61D2B4;
+}
 /*-------------------------------------------*/
 /* Logo/Icons
 /*-------------------------------------------*/
@@ -282,7 +302,6 @@ section {
     text-transform: uppercase;
     border-radius: 200px;
     transition: background-color 1s, border 0.3s, color 0.3s;
-
 }
 
 @media (min-width: 768px) {
@@ -320,21 +339,6 @@ section {
     -webkit-filter: grayscale(0);
     filter: grayscale(0);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25)
-}
-
-/*!*OTHER NAV PROPERTIES*!*/
-
-.main-nav {
-    background-color: rgba(17, 11, 0, 0.8);
-    border-bottom: 1px rgba(21, 244, 0, 0.35);
-    position: fixed;
-    right: 0;
-    left: 0;
-    top: 0;
-    padding-bottom: 20px;
-    text-align: right;
-    transition: background-color .5s ease-out;
-    z-index: 10
 }
 
 /*@media (min-width: 768px) {*/

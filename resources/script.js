@@ -1,12 +1,22 @@
 $(document).ready(function () {
 
-    /* Gallery Filter
-    ========================================================================== */
+    /* Gallery Filter =========================================================*/
     //initialize the filterizd
     var filterizd = $('.filtr-container').filterizr({});
     filterizd.filterizr('setOptions', {delay: 20, delayMode: 'progressive'});
     filterizd.filterizr('setOptions', {layout: 'sameSize'});
 
+
+    //Activate Current Gallery Filter
+    // =========================================================================
+    $('.filtr-button').click(function () {
+        $(this).addClass('active').siblings().removeClass('active');
+    });
+
+    //Activate Current Nav Menu=================================================
+    $('.main-nav li').click(function () {
+        $(this).addClass('active').siblings().removeClass('active');
+    });
 
     // ===== Scroll to Top ====
     var offset = 200;
@@ -24,10 +34,10 @@ $(document).ready(function () {
             scrollTop: 0
         }, 600);
         return false;
-    })
+    });
 
 
-    // Scroll down & activate NAV Menu======================
+    // Scroll down & activate NAV Menu==========================================
     //
     // var navChildren = $("#top-menu li").children();
     // var aArray = [];
