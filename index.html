@@ -14,10 +14,11 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 		<script src="vendors/js/jquery.filterizr.min.js"></script>
 		<script src="resources/script.js"></script>
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 		<nav>
 			<div class="row">
 				<img src="resources/logo2.png" alt="Personal Trainer Oziel Silva" class="logo">
-				<ul class="main-nav">
+				<ul class="main-nav" id="top-menu">
 					<li><a href="#">Home</a></li>
 					<li><a href="#">Wat we doen</a></li>
 					<li><a href="#">About</a></li>
@@ -37,6 +38,8 @@
 	</header>
 
 	<div class="after-header">
+		<!-- Return to Top -->
+		<a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
 		<section class="section-services">
 			<div class="row">
 				<h2>Wat we doen</h2>
@@ -101,7 +104,6 @@
 					<li class="filtr-button filtr" data-filter="fitness">Fitness</li>
 					<li class="filtr-button filtr" data-filter="food">Food</li>
 					<li class="filtr-button filtr" data-filter="smallgroup">Small Group training</li>
-					<li class="filtr-button filtr" data-filter="gym">Gym & equipments</li>
 				</ul>
 			</div>
 			<div class="filtr-container">
@@ -120,9 +122,6 @@
 				</div>
 				<div class="filtr-item" data-category="smallgroup" data-sort="5">
 					<img src="resources/images/group5.jpg">
-				</div>
-				<div class="filtr-item" data-category="smallgroup" data-sort="6">
-					<img src="resources/images/group6.jpg">
 				</div>
 				<div class="filtr-item" data-category="smallgroup" data-sort="7">
 					<img src="resources/images/group7.jpg">
@@ -146,9 +145,6 @@
 				<div class="filtr-item" data-category="fitness" data-sort="6">
 					<img src="resources/images/fitness6.jpg">
 				</div>
-				<div class="filtr-item" data-category="fitness" data-sort="7">
-					<img src="resources/images/fitness7.jpg">
-				</div>
 				<!--food-->
 				<div class="filtr-item" data-category="food" data-sort="1">
 					<img src="resources/images/food1.jpg">
@@ -162,9 +158,7 @@
 				<div class="filtr-item" data-category="food" data-sort="4">
 					<img src="resources/images/food4.jpg">
 				</div>
-				<div class="filtr-item" data-category="food" data-sort="5">
-					<img src="resources/images/food5.jpg">
-				</div>
+
 				<!--coaching-->
 				<div class="filtr-item" data-category="coaching" data-sort="1">
 					<img src="resources/images/coaching1.jpg">
@@ -177,16 +171,6 @@
 				</div>
 				<div class="filtr-item" data-category="coaching" data-sort="4">
 					<img src="resources/images/coaching4.jpg">
-				</div>
-				<!--Gym-->
-				<div class="filtr-item" data-category="gym" data-sort="1">
-					<img src="resources/images/gym1.jpg">
-				</div>
-				<div class="filtr-item" data-category="gym" data-sort="2">
-					<img src="resources/images/gym2.jpg">
-				</div>
-				<div class="filtr-item" data-category="gym" data-sort="3">
-					<img src="resources/images/gym3.jpg">
 				</div>
 
 			</div>
