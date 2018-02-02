@@ -139,36 +139,38 @@ cite {
 input[type=submit] {
     background-color: #61D2B4 !important;
     border: 1px solid #61D2B4 !important;
-    color: #fff !important;
+    color: #000;
     margin-right: 20px;
     transition: background-color 0.3s, border 0.3s, color 0.3s !important;
 }
 
 .btn-ghost:link,
 .btn-ghost:visited {
-    color: #61D2B4;
+    color: #61D2B4 !important;
     border: 1px solid #61D2B4;
-    transition: background-color 0.3s, border 0.3s, color 0.3s !important;
+    transition: all 0.3s, border 0.3s, color 0.3s !important;
 }
 
 .btn:hover,
 .btn:active,
 input[type=submit]:hover,
 input[type=submit]:active {
-    background-color: #009d9e !important;
+    background-color: #61D2B4 !important;
     color: #fff !important;
 }
 
 .btn-full:hover,
 .btn-full:active {
-    border: 1px solid #009d9e;
+    border: 1px solid #61D2B4;
     color: #fff !important;
+    font-weight: 400;
 }
 
 .btn-ghost:hover,
 .btn-ghost:active {
     color: #fff !important;
     border: 1px solid #61D2B4;
+    font-weight: 400;
 }
 
 #return-to-top {
