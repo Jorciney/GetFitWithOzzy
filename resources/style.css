@@ -305,6 +305,8 @@ section {
 
 .section-gallery {
     padding: 80px 80px;
+    height: 100vh;
+    background-color: #f0f0f0;
 }
 
 .section-testimonials {
@@ -494,8 +496,6 @@ li.filtr-button.filtr.active {
     text-align: center;
     border: none;
 }
-
-
 
 /*@media (min-width: 768px) {*/
 /*.main-nav {*/

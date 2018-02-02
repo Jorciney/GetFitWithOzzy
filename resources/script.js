@@ -3,8 +3,13 @@ $(document).ready(function () {
     /* Gallery Filter =========================================================*/
     //initialize the filterizd
     var filterizd = $('.filtr-container').filterizr({});
-    filterizd.filterizr('setOptions', {delay: 20, delayMode: 'progressive'});
-    filterizd.filterizr('setOptions', {layout: 'sameSize'});
+    filterizd.filterizr('setOptions',
+        {
+            filter: 'coaching', // this is the default filtering
+            delay: 20,
+            delayMode: 'progressive',
+            layout: 'sameSize'
+        });
 
 
     //Activate Current Gallery Filter
@@ -35,13 +40,6 @@ $(document).ready(function () {
         }, 600);
         return false;
     });
-
-
-    //carousel options
-    $('#quote-carousel').carousel({
-        pause: true, interval: 10000,
-    });
-
 
 
     // Scroll down & activate NAV Menu==========================================
