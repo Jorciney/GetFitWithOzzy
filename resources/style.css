@@ -550,6 +550,49 @@ textarea {
     color: black;
 }
 
+/*===========================================================*/
+/* FOOTER*/
+/*===========================================================*/
+
+footer {
+    background-color: #333;
+    color: #a3a3a3;
+}
+
+.footer-nav {
+    list-style: none;
+    font-size: 200%;
+}
+
+.footer-nav li {
+    margin: 2px 20px;
+    display: inline-block;
+}
+
+.fa-facebook-square:hover {
+    color: #3B5998;
+}
+
+.fa-youtube:hover {
+    color: red;
+}
+
+.footer-nav li a:visited {
+    text-decoration: none;
+    border: 0;
+    color: #afafaf;
+}
+
+.fa-instagram:hover {
+    color: #61D2B4;
+}
+
+footer p {
+    color: #8888;
+    text-align: center;
+    font-size: 85%;
+}
+
 /*@media (min-width: 768px) {*/
 /*.main-nav {*/
 /*background-color: transparent*/
