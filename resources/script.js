@@ -18,10 +18,6 @@ $(document).ready(function () {
         $(this).addClass('active').siblings().removeClass('active');
     });
 
-    //Activate Current Nav Menu=================================================
-    $('.main-nav li').click(function () {
-        $(this).addClass('active').siblings().removeClass('active');
-    });
 
     // ===== Scroll to Top ====
     var offset = 200;
@@ -41,32 +37,59 @@ $(document).ready(function () {
         return false;
     });
 
+    // =====================================================
+    // SCROLL on buttons
+    // =====================================================
+    $('.js--scroll-to-price').click(function () {
+        $('html, body').animate({scrollTop: $('.js--section-prices').offset().top}, 1000);
+    });
+    $('.js--scroll-to-services').click(function () {
+        $('html, body').animate({scrollTop: $('.js--section-services').offset().top}, 1000);
+    });
+
 
     // Scroll down & activate NAV Menu==========================================
     //
-    // var navChildren = $("#top-menu li").children();
-    // var aArray = [];
-    // for (var i = 0; i < navChildren.length; i++) {
-    //     var aChild = navChildren[i];
-    //     var ahref = $(aChild).attr('href');
-    //     aArray.push(ahref);
-    // }
-    //
-    // $(window).scroll(function() {
-    //     var windowPos = $(window).scrollTop();
-    //     var windowHeight = $(window).height();
-    //     var docHeight = $(document).height();
-    //     for (var i = 0; i < aArray.length; i++) {
-    //         var theID = aArray[i];
-    //         var secPosition = $(theID).offset().top;
-    //         secPosition = secPosition - 135;
-    //         var divHeight = $(theID).height();
-    //         divHeight = divHeight + 90;
-    //         if (windowPos >= secPosition && windowPos < (secPosition + divHeight)) {
-    //             $("a[href='" + theID + "']").parent().addClass("active");
-    //         } else {
-    //             $("a[href='" + theID + "']").parent().removeClass("active");
-    //         }
-    //     }
-    // });
+    $('a[href*="#"]:not([href="#"])').click(function () {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html, body').unbind().animate({
+                    scrollTop: target.offset().top - 40
+                }, 'slow');
+
+                //Activate Current Nav Menu=================================================
+                $('a').each(function () {
+                    $(this).removeClass('active');
+                })
+                $(this).addClass('active');
+
+                return false;
+            }
+        }
+    });
+
+    // ON PAGE SCROLL
+    // =========================================================================
+    var sections = $('.js--page-section')
+        , nav = $('.main-nav')
+        , nav_height = nav.outerHeight();
+
+    $(window).on('scroll', function () {
+        var cur_pos = $(this).scrollTop();
+
+        sections.each(function () {
+            var top = $(this).offset().top - nav_height - 30,
+                bottom = top + $(this).outerHeight();
+
+            if (cur_pos >= top && cur_pos <= bottom) {
+                nav.find('a').removeClass('active');
+                sections.removeClass('active');
+
+                $(this).addClass('active');
+                nav.find('a[href="#' + $(this).attr('id') + '"]').addClass('active');
+            }
+        });
+    });
 });

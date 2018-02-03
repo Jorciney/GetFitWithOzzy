@@ -233,11 +233,6 @@ input[type=submit] {
     list-style: none;
     background: #0d0d0d;
     display: inline-block; /* show side by side*/
-    margin-right: 15px;
-    margin-top: 20px;
-    padding: 6px 10px 4px 10px !important;
-    border-radius: 200px;
-    transition: background-color .5s ease-out;
 }
 
 .main-nav li a {
@@ -245,9 +240,12 @@ input[type=submit] {
     color: #ffffff;
     text-transform: uppercase;
     font-size: 110%;
-
-    transition: color .5s ease-out, background 1s ease-in;
-
+    float: right;
+    margin-right: 15px;
+    margin-top: 20px;
+    padding: 6px 10px 4px 10px !important;
+    border-radius: 200px;
+    transition: background-color .5s ease-out;
 }
 
 .main-nav li:visited,
@@ -256,7 +254,7 @@ input[type=submit] {
     transition: background-color 0.3s, border 0.3s, color 0.3s;
 }
 
-.main-nav li.active {
+.main-nav li a.active {
     background-color: #61D2B4;
     border-radius: 200px;
     color: #fff;
@@ -316,6 +314,12 @@ section {
     -o-background-size: cover;
     background-position: center;
     color: #fff;
+}
+
+.section-services,
+.section-testimonials {
+    height: 80vh !important;
+
 }
 
 /*-------------------------------------------*/
