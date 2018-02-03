@@ -152,9 +152,7 @@ input[type=submit] {
 }
 
 .btn:hover,
-.btn:active,
-input[type=submit]:hover,
-input[type=submit]:active {
+.btn:active {
     background-color: #61D2B4 !important;
     color: #fff !important;
 }
@@ -497,6 +495,59 @@ li.filtr-button.filtr.active {
 .plan-box div:last-child {
     text-align: center;
     border: none;
+}
+
+/*===========================================================*/
+/* CONTACT FORM*/
+/*===========================================================*/
+.contact-form {
+    width: 100%;
+    margin: 0 auto;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+textarea {
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #a1a1a1;
+}
+
+*:focus {
+    outline: none;
+}
+
+.contact-info {
+    padding: 0 10px;
+    text-decoration: none;
+}
+
+.contact-info i {
+    padding-right: 10px;
+    float: left;
+    color: #8e8e8e;
+    transition: all 0.4s;
+}
+
+.contact-info h3 {
+    margin: 0;
+    text-align: left;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+.contact-info i:hover,
+.contact-info h3:hover {
+    color: #61D2B4;
+}
+
+.contact-info a:link,
+.contact-info a:visited {
+    text-decoration: none;
+    color: black;
 }
 
 /*@media (min-width: 768px) {*/
