@@ -46,6 +46,9 @@ $(document).ready(function () {
     $('.js--scroll-to-services').click(function () {
         $('html, body').animate({scrollTop: $('.js--section-services').offset().top}, 1000);
     });
+    $('.js--scroll-to-contact').click(function () {
+        $('html, body').animate({scrollTop: $('.js--section-contact').offset().top}, 1000);
+    });
 
 
     // Scroll down & activate NAV Menu==========================================
