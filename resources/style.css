@@ -275,6 +275,17 @@ input[type=submit] {
     width: 100%;
 }
 
+/*Mobile Main nav icon */
+.main-nav-icon {
+    float: left;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.main-nav-icon i {
+    font-size: 200%;
+    color: #fff;
+}
 /*-------------------------------------------*/
 /* Logo/Icons
 /*-------------------------------------------*/
