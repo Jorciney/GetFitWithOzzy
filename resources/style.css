@@ -105,7 +105,7 @@ h3 {
 
 .main-text-box {
     position: absolute;
-    width: 1140px;
+    width: 100%;
     top: 75%;
     left: 65%;
     transform: translate(-50%, -50%); /** Text position*/
@@ -280,6 +280,7 @@ input[type=submit] {
     float: left;
     margin-top: 30px;
     cursor: pointer;
+    display: none;
 }
 
 .main-nav-icon i {
