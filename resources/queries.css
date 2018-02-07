@@ -24,11 +24,6 @@
         margin: 0 0 4% 0;
     }
 
-    .main-nav {
-        float: left !important;
-        top: 0;
-    }
-
     .main-nav li {
         display: block;
         text-align: left;
@@ -45,6 +40,8 @@
     /*Mobile Main nav icon */
     .main-nav-icon {
         display: inline-block;
+        margin-left: 30px;
+        margin-top: -10px;
     }
 
     .main-nav-icon i {
@@ -63,6 +60,10 @@
     .long-text {
         width: 100% !important;
         margin-left: 0%;
+    }
+
+    #return-to-top {
+        display: none !important;
     }
 }
 

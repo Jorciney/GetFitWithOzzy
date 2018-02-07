@@ -1,5 +1,13 @@
 $(document).ready(function () {
 
+    // define the media query for tablet size
+    const mediaQueryTablet = window.matchMedia("(max-width: 767px)");
+    const mediaQueryPhone = window.matchMedia("(max-width: 480px)");
+
+    //define and instantiate the responsible nav bar
+    var nav = responsiveNav(".nav-collapse", {closeOnNavClick: true, customToggle: ".main-nav-icon", animate: true});
+
+
     /* Gallery Filter =========================================================*/
     //initialize the filterizd
     var filterizd = $('.filtr-container').filterizr({});
@@ -54,6 +62,7 @@ $(document).ready(function () {
     // Scroll down & activate NAV Menu==========================================
     //
     $('a[href*="#"]:not([href="#"])').click(function () {
+
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
             var target = $(this.hash);
             target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
@@ -67,7 +76,6 @@ $(document).ready(function () {
                     $(this).removeClass('active');
                 })
                 $(this).addClass('active');
-
                 return false;
             }
         }
@@ -75,24 +83,29 @@ $(document).ready(function () {
 
     // ON PAGE SCROLL
     // =========================================================================
-    var sections = $('.js--page-section')
-        , nav = $('.main-nav')
-        , nav_height = nav.outerHeight();
+    if (mediaQueryTablet.matches) { //only if its wider then the mediaQuery for tablet
+        var sections = $('.js--page-section')
+            , nav = $('.main-nav')
+            , nav_height = nav.outerHeight();
 
-    $(window).on('scroll', function () {
-        var cur_pos = $(this).scrollTop();
+        $(window).on('scroll', function () {
+            var cur_pos = $(this).scrollTop();
 
-        sections.each(function () {
-            var top = $(this).offset().top - nav_height - 30,
-                bottom = top + $(this).outerHeight();
+            sections.each(function () {
+                var top = $(this).offset().top - nav_height - 30,
+                    bottom = top + $(this).outerHeight();
 
-            if (cur_pos >= top && cur_pos <= bottom) {
-                nav.find('a').removeClass('active');
-                sections.removeClass('active');
+                if (cur_pos >= top && cur_pos <= bottom) {
+                    nav.find('a').removeClass('active');
+                    sections.removeClass('active');
 
-                $(this).addClass('active');
-                nav.find('a[href="#' + $(this).attr('id') + '"]').addClass('active');
-            }
+                    $(this).addClass('active');
+                    nav.find('a[href="#' + $(this).attr('id') + '"]').addClass('active');
+                }
+            });
         });
-    });
+    }
+
+
+
 });
