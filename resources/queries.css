@@ -8,14 +8,14 @@
     }
 
     .my-section {
-        padding: 38px 0;
+        padding: 38px 15px;
         width: 100% !important;
         left: 0;
         right: 0;
     }
 
     .main-text-box {
-        position: relative;
+        position: relative !important;
         display: inline-block;
         top: 55%;
         left: 50%;
@@ -77,6 +77,28 @@
     #return-to-top {
         display: none !important;
     }
+
+    .filtr-item im {
+        max-width: 110% !important;
+        max-height: 110% !important;
+    }
+
+    .filtr-item img {
+        object-fit: cover;
+    }
+
+    .plan-box {
+        margin-bottom: 20px;
+    }
+
+    .main-text-box a {
+        margin: 10px;
+    }
+
+    .contact-form {
+        padding: 10px;
+    }
+
 }
 
 @media only screen and (max-width: 480px) {
