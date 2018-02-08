@@ -104,7 +104,7 @@ h3 {
 }
 
 .main-text-box {
-    position: absolute;
+    position: fixed;
     width: 100%;
     top: 75%;
     left: 65%;
@@ -287,6 +287,7 @@ input[type=submit] {
     font-size: 200%;
     color: #fff;
 }
+
 /*-------------------------------------------*/
 /* Logo/Icons
 /*-------------------------------------------*/
