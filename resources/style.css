@@ -295,10 +295,14 @@ input[type=submit] {
 /* Logo/Icons
 /*-------------------------------------------*/
 .logo {
-    height: 100px;
+    height: 150px;
     width: auto;
     float: left;
-    margin-top: 20px;
+    margin-top: 55px;
+}
+
+#home {
+    margin-left: 0 !important;
 }
 
 .services-icons {
