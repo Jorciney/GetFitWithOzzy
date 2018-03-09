@@ -217,7 +217,6 @@ input[type=submit] {
 /*Menu*/
 /*-------------------------------------------*/
 .main-nav {
-    float: right;
     background-color: black;
     position: fixed;
     /*right: 0;*/
@@ -232,7 +231,7 @@ input[type=submit] {
 .main-nav li {
     list-style: none;
     background: #0d0d0d;
-    display: inline-block; /* show side by side*/
+    display: contents !important;
 }
 
 .main-nav li a {
@@ -240,12 +239,12 @@ input[type=submit] {
     color: #ffffff;
     text-transform: uppercase;
     font-size: 110%;
-    float: right;
     margin-right: 15px;
     margin-top: 20px;
     padding: 6px 10px 4px 10px !important;
     border-radius: 200px;
     transition: background-color .5s ease-out;
+    display: inline-block;
 }
 
 .main-nav li:visited,
